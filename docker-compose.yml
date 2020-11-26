@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  default:
+    build:
+      context: ./buster
+    tty: true
+    stdin_open: true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ~/.bashrc:/home/ubuntu/.bashrc
+      - ~/.dotconfig:/home/ubuntu/.dotconfig
+      - ~/wks:/home/ubuntu/wks
