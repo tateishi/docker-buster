@@ -3,7 +3,9 @@ FROM debian:buster
 RUN apt-get update && apt-get install -y \
         git \
         bash-completion \
-        sudo
+        sudo \
+        build-essential \
+        devscripts
 
 RUN groupadd -g 1000 ubuntu \
         && useradd -u 1000 -d /home/ubuntu -g ubuntu ubuntu \
