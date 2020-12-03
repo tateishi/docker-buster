@@ -11,3 +11,14 @@ services:
       - ~/.bashrc:/home/ubuntu/.bashrc
       - ~/.dotconfig:/home/ubuntu/.dotconfig
       - ~/wks:/home/ubuntu/wks
+
+  plain:
+    build:
+      context: ./plain
+    tty: true
+    stdin_open: true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ~/.bashrc:/home/ubuntu/.bashrc
+      - ~/.dotconfig:/home/ubuntu/.dotconfig
+      - ~/wks:/home/ubuntu/wks
